@@ -400,21 +400,18 @@
         max-width: 500px;
         width: 100%;
     }
-    & .input__name {
-        width: 250px !important;
+    & .feedback__form {
+        max-width: 494px;
     }
     & .feedback__input {
+        display: flex;
         position: relative;
-        margin-right: 35px;
         margin-top: 6px;
-        width: 535px;
+        max-width: 494px;
+        width: 100%;
         & input {
             transition: background-color 0.5s;
             width: 100%;
-        }
-
-        &:last-of-type {
-            margin-right: 0;
         }
     }
     & .feedback__content {
@@ -426,11 +423,16 @@
         margin-top: 16px;
         color: var(--dark-gray-neutral);
     }
-    & .feedback__name {
+    & .feedback__name,
+    .feedback__data {
         display: flex;
-    }
-    & .feedback__data {
-        display: flex;
+        max-width: 494px;
+        & .feedback__input {
+            margin-right: 8px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
     }
     & .feedback__image {
         min-height: 695px;
@@ -438,7 +440,7 @@
         z-index: 1;
         position: relative;
         & img {
-            max-width: 695px;
+            max-width: 746px;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -460,7 +462,7 @@
         & svg {
             position: absolute;
             top: 19px;
-            right: -10px;
+            right: 15px;
             fill: var(--dark-gray-neutral);
             user-select: none;
         }
@@ -472,11 +474,12 @@
             z-index: 1;
             list-style-type: none;
             border-radius: 0 0 24px 24px;
-            width: 105.2%;
+            width: 99.7%;
             border: 1px;
             background-color: var(--white-neutral);
             border: 1px solid var(--light-gray-neutral);
             border-top-width: 0;
+            top: 46px;
 
             & .select__element {
                 cursor: pointer;
@@ -768,7 +771,7 @@
     }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 481px) {
     .header {
         border-radius: 0 0 8px 8px;
         & .header__logo {
@@ -860,7 +863,7 @@
                 padding: 8px 24px;
             }
             & img {
-                max-width: 343px;
+                max-width: 380px;
                 min-height: 228px;
             }
             z-index: 1;
@@ -942,25 +945,22 @@
         }
         & .feedback__name,
         .feedback__data {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
         & .feedback__input {
             margin-right: 0;
-            width: 100%;
-            & .input {
-                width: 300px;
-            }
         }
         & .feedback__submitted {
             padding: 100px 0;
         }
         & .feedback__select {
-            & svg {
-                right: 10px;
-            }
             & .select__list {
                 width: 99.5%;
             }
+        }
+        & .input__name {
+            width: 100% !important;
         }
     }
     .footer {
