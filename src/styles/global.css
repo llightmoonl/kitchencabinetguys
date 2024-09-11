@@ -224,26 +224,13 @@ h5 {
     margin-top: 100px;
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 481px) {
     .container-lg {
-        max-width: 1055px;
-        margin: 0 auto;
+        max-width: 481px;
         padding: 0 16px;
     }
     .container-xl {
-        max-width: 1199px;
-        margin: 0 auto;
-        padding: 0 16px;
-    }
-}
-
-@media only screen and (max-width: 376px) {
-    .container-lg {
-        max-width: 376px;
-        padding: 0 16px;
-    }
-    .container-xl {
-        max-width: 376px;
+        max-width: 481px;
         padding: 0 16px;
     }
     h1 {
